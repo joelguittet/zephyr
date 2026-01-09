@@ -78,6 +78,8 @@ def shell(dut: DeviceAdapter) -> Shell:
     logger.info('Wait for prompt')
     if not shell.wait_for_prompt():
         pytest.fail('Prompt not found')
+    if dut.device_config.type == 'hardware':
+        dut.clear_buffer()
     return shell
 
 
