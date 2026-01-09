@@ -1,0 +1,6 @@
+sample:
+  name: espressif_rmt
+tests:
+  sample.drivers.misc.espressif_rmt:
+    tags:
+      - drivers
